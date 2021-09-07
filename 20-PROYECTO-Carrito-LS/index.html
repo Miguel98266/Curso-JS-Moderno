@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/custom.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet"/>
 </head>
 <body>
 <header id="header" class="header">
@@ -19,7 +20,11 @@
             <div class="two columns u-pull-right">
                 <ul>
                     <li class="submenu">
-                            <img src="img/cart.png" id="img-carrito">
+                        <a href="#" class="cart">
+                            <i class="fas fa-shopping-cart fa-2x"></i><br><span>Carrito</span>
+                            <span id="cart_menu_num" class="badge rounded-circle"></span>
+                          </a>
+                           
                             <div id="carrito">
                                     
                                     <table id="lista-carrito" class="u-full-width">

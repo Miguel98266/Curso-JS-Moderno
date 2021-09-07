@@ -12,7 +12,9 @@ const carrito = [
 meses.forEach((mes, indice) => {
   if (mes === "Abril") {
     console.log(`${mes} Encontrado en el indice ${indice}`);
+    mes[indice].nombre="Nuevo"
   }
+  console.log(mes)
 });
 
 //Encontrar el indice de Abril
