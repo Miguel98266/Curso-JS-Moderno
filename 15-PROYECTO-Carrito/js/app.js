@@ -138,7 +138,7 @@ function limpiarHtml() {
 function limpiarnumeroscarritoHtml() {
   // Forma lenta
   // contenedorCarrito.innerHTML = "";
-
+  
   while (num.firstChild) {
     contenedorCarrito.removeChild(contenedorCarrito.firstChild);
   }
