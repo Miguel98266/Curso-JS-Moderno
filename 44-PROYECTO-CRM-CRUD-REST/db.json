@@ -6,6 +6,13 @@
       "telefono": "12",
       "empresa": "12212",
       "id": 26
+    },
+    {
+      "nombre": "Miguel NUEVO!",
+      "email": "correo@correo.com",
+      "telefono": "12",
+      "empresa": "123123",
+      "id": 24
     }
   ]
 }
