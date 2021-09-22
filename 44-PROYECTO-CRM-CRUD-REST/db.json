@@ -1,10 +1,10 @@
 {
   "clientes": [
     {
-      "nombre": "Juan NUEVO!",
+      "nombre": "Juan NUEVO",
       "email": "correo2@correo.com",
       "telefono": "12",
-      "empresa": "12212",
+      "empresa": "12",
       "id": 26
     },
     {
@@ -13,6 +13,34 @@
       "telefono": "12",
       "empresa": "123123",
       "id": 24
+    },
+    {
+      "nombre": "Miguel Angel",
+      "email": "miguel.calixto98@hotmail.com",
+      "telefono": "1233424",
+      "empresa": "MACS",
+      "id": 28
+    },
+    {
+      "nombre": "Miguel Angel",
+      "email": "miguel98266@gmail.com",
+      "telefono": "1233424",
+      "empresa": "MACS",
+      "id": 29
+    },
+    {
+      "nombre": "Angeles",
+      "email": "angeleschavez+1@wolfsellers.com",
+      "telefono": "1213123",
+      "empresa": "MACS",
+      "id": 30
+    },
+    {
+      "nombre": "Miguel Angel Calixto",
+      "email": "mikiler98@gmail.com",
+      "telefono": "1213123",
+      "empresa": "qweadasd",
+      "id": 31
     }
   ]
 }
