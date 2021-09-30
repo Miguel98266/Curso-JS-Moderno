@@ -1,3 +1,10 @@
+// async, el archivo se descarga de forma asincrónica y luego se ejecuta tan pronto 
+// como se descarga.
+
+// Con defer, el archivo se descarga de forma asincrónica, pero se ejecuta solo cuando 
+// se completa el análisis del documento. 
+
+
 const criptomonedasSelect = document.querySelector('#criptomonedas');
 const monedaSelect = document.querySelector('#moneda');
 const formulario = document.querySelector('#formulario');
@@ -37,15 +44,33 @@ function consultarCriptomonedas() {
 // llena el select 
 function selectCriptomonedas(criptomonedas) {
 
-    criptomonedas.forEach( cripto => {
-        const { FullName, Name } = cripto.CoinInfo;
-        const option = document.createElement('option');
-        option.value = Name;
-        option.textContent = FullName;
-        // insertar el HTML
-        criptomonedasSelect.appendChild(option);
-    });
+    // Conocer el tiempo de ejecuccion
 
+    const inicio=performance.now();
+
+    // criptomonedas.forEach( cripto => {
+    //     const { FullName, Name } = cripto.CoinInfo;
+    //     const option = document.createElement('option');
+    //     option.value = Name;
+    //     option.textContent = FullName;
+    //     // insertar el HTML
+    //     criptomonedasSelect.appendChild(option);
+    // });
+
+    for (let i = 0; i < criptomonedas.length; i++) {
+        
+            const { FullName, Name } = criptomonedas[i].CoinInfo;
+            const option = document.createElement('option');
+            option.value = Name;
+            option.textContent = FullName;
+            // insertar el HTML
+            criptomonedasSelect.appendChild(option);
+    
+        
+    }
+
+    const fin=performance.now();
+    console.log(fin-inicio);
 }
 
 
@@ -89,6 +114,7 @@ function mostrarAlerta(mensaje) {
 
 function consultarAPI() {
 
+    const inicio=performance.now();
     const { moneda, criptomoneda} = objBusqueda;
 
     const url = `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${criptomoneda}&tsyms=${moneda}`;
@@ -100,7 +126,9 @@ function consultarAPI() {
         .then(cotizacion => {
             mostrarCotizacionHTML(cotizacion.DISPLAY[criptomoneda][moneda]);
         });
+    const fin=performance.now();
 
+    console.log('Consultar API',fin-inicio);
 }
 
 function mostrarCotizacionHTML(cotizacion) {
@@ -111,7 +139,7 @@ function mostrarCotizacionHTML(cotizacion) {
     const  { PRICE, HIGHDAY, LOWDAY, CHANGEPCT24HOUR, LASTUPDATE } = cotizacion;
 
 
-    debugger;
+    // debugger;   
 
     const precio = document.createElement('p');
     precio.classList.add('precio');
