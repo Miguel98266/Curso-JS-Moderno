@@ -4,13 +4,16 @@
   "description": "Primer Proyecto con Noje.js",
   "main": "index.js",
   "scripts": {
-    "dev":"nodemon index.js"
+    "dev": "nodemon index.js"
   },
-  "type":"module" ,
+  "type": "module",
   "author": "Miguel Calixto",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mysql2": "^2.3.2",
+    "pug": "^3.0.2",
+    "sequelize": "^6.7.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.13"
